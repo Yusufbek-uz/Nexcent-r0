@@ -1,0 +1,284 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+body{
+  background-color: #fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.btn{
+  padding: 10px 30px;
+  background-color: #4CAF4F;
+  transition: 0.7s;
+}
+.btn:hover{
+  transform: scale(1.2);
+  border: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  gap: 100px;
+  img{
+    width: 300px;
+  }
+  nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    li{
+      list-style: none;
+      a{
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+      }
+      a:hover{
+        color: #4CAF4F;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+main{
+  .s1{
+    margin: 40px 0;
+    background-color: #F5F7FA;
+    .container{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .s1-t{
+      text-align: left;
+      h1{
+        padding: 50px 0;
+        color: #4D4D4D;
+        font-size: 52px;
+        text-align: left;
+      }
+      span{
+        color: #4CAF4F;
+      }
+    }
+  }
+  .s2{
+    text-align: center;
+    padding: 90px 0;
+    h2{
+      color: black;
+      padding: 70px 0;
+      font-size: 54px;
+    }
+    .imgs{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    img{
+      transition: 0.4s;
+    }
+    img:hover{
+      transform: scale(1.5);
+    }
+  }
+  .s3{
+    padding: 50px 0;
+    h1{
+      color: #4D4D4D;
+    }
+    .cards{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px 0;
+      .card{
+        transition: 0.8s;
+        height: 300px;
+        width: 240px;
+        border-radius: 10px;
+        background-color: #f7f7f723;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        h4{
+          color: #4D4D4D;
+          text-wrap: balance;
+          padding: 10px 0px 20px 0px;
+        }
+        p{
+          color: #4f4f4f;
+          font-size: 14px;
+          text-wrap: balance;
+        }
+      }
+      .card:hover{
+        transform: scale(1.15);
+      }
+    }
+  }
+  .s4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #4f4f4f;
+    text-align: left;
+    h2{
+      color: #4D4D4D;
+      padding: 10px 0;
+      text-wrap: balance;
+    }
+    p{
+      text-wrap: balance;
+      padding: 10px 0 50px 0;
+    }
+    img{
+      transition: 0.5s;
+    }
+    img:hover{
+      transform: scale(1.4);
+    }
+  }
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  header {
+      gap: 50px;
+  }
+
+  header img {
+      width: 250px;
+  }
+
+  main .s1 .container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  main .s1 .s1-t h1 {
+      font-size: 42px;
+  }
+
+  main .s2 h2 {
+      font-size: 44px;
+  }
+
+  main .s3 .card {
+      width: 200px;
+      height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  main .s1 .s1-t h1 {
+      font-size: 32px;
+  }
+  main .s1 .container{
+    /* margin: 5px 0; */
+    text-align: center;
+    padding: 0;
+    .s1-t h1{
+      font-size: 20px;
+    }
+  }
+
+  main .s2 h2 {
+      font-size: 34px;
+  }
+
+  main .s3 .card {
+      width: 150px;
+      height: 200px;
+  }
+
+  main .s4 {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+      width: 200px;
+  }
+
+  main .s1 .s1-t h1 {
+      font-size: 28px;
+  }
+
+  main .s2 h2 {
+      font-size: 28px;
+  }
+
+  main .s3 .card {
+      width: 100%;
+      height: auto;
+      gap: 20px;
+  }
+}
